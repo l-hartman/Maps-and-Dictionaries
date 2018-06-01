@@ -6,8 +6,6 @@
 
 #include "Dictionary.h"
 
-using namespace std;
-
 // Implementation of the Dictionary class, backed by an unsorted array with
 // a given maximum size.  Most operations are O(n)
 template<class K, class V>
@@ -133,14 +131,14 @@ class SimpleDictionary: public Dictionary<K,V> {
 
         // Displays the dictionary on standard output
         void display() const override {
-            cout << "Dictionary: ";
+            std::cout << "Dictionary: ";
             for (int i=0; i<count; i++) {
-                cout << keys[i] << "->" << values[i];
+                std::cout << keys[i] << "->" << values[i];
                 if (i != count-1) {
-                    cout << ", ";
+                    std::cout << ", ";
                 } 
             }
-            cout << endl;
+            std::cout << std::endl;
         }
 
         // Returns the number of elements in the dictionary

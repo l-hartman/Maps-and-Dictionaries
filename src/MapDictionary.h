@@ -3,8 +3,6 @@
 
 #include "Dictionary.h"
 
-using namespace std;
-
 template<class K, class V>
 class MapDictionary: public Dictionary<K, V> {
     public:
@@ -54,7 +52,7 @@ class MapDictionary: public Dictionary<K, V> {
         // associated with what values.  The order of keys can be in any order.
         void display() const override {
 			for (auto i:data){
-				cout << i.first << " " << i.second << endl;
+				std::cout << i.first << " " << i.second << std::endl;
 			}
         }
 
@@ -74,5 +72,5 @@ class MapDictionary: public Dictionary<K, V> {
         }
     private:
         // You are NOT allowed to add additional member variables.
-        map<K, V> data;
+        std::map<K, V> data;
 };
